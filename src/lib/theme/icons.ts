@@ -1,0 +1,38 @@
+import {
+	Box,
+	CircleDot,
+	Database,
+	FileCode,
+	GitBranch,
+	Key,
+	Link,
+	List,
+	Lock,
+	Play,
+	Settings,
+	Shield,
+	Tag,
+	Type,
+	Users,
+	Workflow,
+} from "lucide-svelte";
+export const icons = {
+	entity: Box,
+	field: Type,
+	lifecycle: Workflow,
+	state: CircleDot,
+	transition: Play,
+	relationship: Link,
+	permission: Shield,
+	invariant: Lock,
+	role: Users,
+	database: Database,
+	system: Settings,
+	key: Key,
+	tag: Tag,
+	list: List,
+	code: FileCode,
+	branch: GitBranch,
+} as const;
+
+export type IconName = keyof typeof icons;
